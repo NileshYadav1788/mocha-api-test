@@ -1,6 +1,5 @@
-const axios = require('axios');
-const chai = require('chai');
-const expect = chai.expect;
+import axios from 'axios';
+import { expect } from 'chai';
 
 describe('SuiteName: getPetById', function() {
   it('should fetch pet details by id', async function() {
@@ -12,7 +11,7 @@ describe('SuiteName: getPetById', function() {
       expect(response.data.name).to.equal('doggie');
     } catch (error) {
       console.error('Test failed:', error);
-      throw error; // Stop execution if error
+      throw error;
     }
   });
 });
