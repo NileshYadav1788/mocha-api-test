@@ -1,7 +1,7 @@
 {
   "scripts": {
     "test": "mocha ApiTests/**/*.ts",
-    "test:single": "mocha --timeout 60000"
+    "test:single": "mocha"
   },
   "dependencies": {
     "axios": "^1.11.0"

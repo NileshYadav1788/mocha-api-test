@@ -3,6 +3,7 @@ import { expect } from 'chai';
 
 describe('SuiteName: create new pet', function () {
     it('should create new pet on pet store', async function () {
+        // this.timeout(5000); // 5 seconds
         const endpoint = 'https://petstore.swagger.io/v2/pet';
         const payload = {
             "id": 0,
@@ -23,6 +24,8 @@ describe('SuiteName: create new pet', function () {
             "status": "available"
         }
         try {
+            // Add 2 second delay
+            // await new Promise(resolve => setTimeout(resolve, 2000));
             const response = await axios.post(endpoint, payload);
             expect(response.status).to.equal(200);
 
